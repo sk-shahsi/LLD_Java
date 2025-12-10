@@ -1,6 +1,7 @@
 package com.critional.deaign;
 
 public class Singletone {
+//    Egger Initialization
     //this class objective is to create only one and one object
 
     private static Singletone singletone = new Singletone();
