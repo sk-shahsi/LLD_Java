@@ -1,6 +1,4 @@
-package com.critional.deaign;
-
-import com.sun.source.tree.SynchronizedTree;
+package com.critional.deaign.Singletone;
 
 public class Singletone_2 {
 // Synchronize Block Added

@@ -1,4 +1,4 @@
-package com.critional.deaign;
+package com.critional.deaign.Singletone;
 
 public class Singletone_1 {
     //this class is Lazy Initialization
