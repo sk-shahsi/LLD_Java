@@ -27,7 +27,7 @@ public class Directory {
         System.out.println("Directory Name: "+ directoryName);
         for(Object obj : objectList){
             if(obj instanceof File){
-                ((File) obj).printContents();
+               // ((File) obj).printContents();
 
             }else if(obj instanceof  Directory){
                 ((Directory) obj).printContents();
