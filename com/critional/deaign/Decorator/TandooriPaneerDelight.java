@@ -1,13 +1,13 @@
 package com.critional.deaign.Decorator;
 
-public class Farmhous implements BasePizza{
+public class TandooriPaneerDelight implements BasePizza{
     @Override
     public String getDescription() {
-        return "Farmhouse Pizza";
+        return "Tandoori Paneer Delight Pizza";
     }
 
     @Override
     public double getCost() {
-        return 300;
+        return 400.0;
     }
 }
