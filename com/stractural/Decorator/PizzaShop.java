@@ -1,4 +1,4 @@
-package com.critional.deaign.Decorator;
+package com.stractural.Decorator;
 
 public class PizzaShop {
     public static void main(String[] args) {

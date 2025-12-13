@@ -1,4 +1,4 @@
-package com.critional.deaign.Decorator;
+package com.stractural.Decorator;
 // step 2: Define the Concrete Component
 public class ChickenDominator implements BasePizza{
     @Override

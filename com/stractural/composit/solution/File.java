@@ -1,4 +1,4 @@
-package com.critional.deaign.composit.solution;
+package com.stractural.composit.solution;
 
 public class File implements FileSystemComponent{
     String fileName;

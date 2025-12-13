@@ -1,4 +1,4 @@
-package com.critional.deaign.Decorator;
+package com.stractural.Decorator;
 
 // Step 1: Define the Component Interface
 

@@ -1,4 +1,4 @@
-package com.critional.deaign.composit;
+package com.stractural.composit;
 
 import java.io.File;
 import java.util.ArrayList;

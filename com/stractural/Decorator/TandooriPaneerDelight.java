@@ -1,4 +1,4 @@
-package com.critional.deaign.Decorator;
+package com.stractural.Decorator;
 
 public class TandooriPaneerDelight implements BasePizza{
     @Override

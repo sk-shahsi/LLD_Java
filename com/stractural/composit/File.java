@@ -1,4 +1,4 @@
-package com.critional.deaign.composit;
+package com.stractural.composit;
 
 public class File {
     String fileName;

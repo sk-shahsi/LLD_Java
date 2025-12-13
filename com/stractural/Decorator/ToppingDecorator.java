@@ -1,4 +1,4 @@
-package com.critional.deaign.Decorator;
+package com.stractural.Decorator;
 
 public abstract class ToppingDecorator implements BasePizza {
 BasePizza pizza;
