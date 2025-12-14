@@ -1,5 +1,5 @@
 package com.critional.deaign.abstractFactory;
-
+// Step 4: Abstract Factory interface
 public interface CarFactory {
     // Factory methods
     CarInterior createInterior();
