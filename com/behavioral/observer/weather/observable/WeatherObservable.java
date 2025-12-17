@@ -5,9 +5,9 @@ package com.behavioral.observer.weather.observable;
 
 public interface WeatherObservable {
 
-//    void addObserver(WeatherObserver observer);
-//
-//    void removeObserver(WeatherObserver observer);
+    void addObserver(WeatherObserver observer);
+
+    void removeObserver(WeatherObserver observer);
 
     void notifyObservers();
 
