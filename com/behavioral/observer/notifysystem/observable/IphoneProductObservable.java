@@ -1,6 +1,10 @@
 package com.behavioral.observer.notifysystem.observable;
+import com.behavioral.observer.notifysystem.observable.*;
+
+import com.behavioral.observer.notifysystem.observer.StockNotificationObserver;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class IphoneProductObservable implements StockAvailabilityObservable{
 
@@ -21,6 +25,7 @@ public class IphoneProductObservable implements StockAvailabilityObservable{
     @Override
     public void addStockObserver(StockAvailabilityObservable observer) {
         stockObservers.add(observer);
+
         System.out.println("[+]" + observer.getUserId() + " subscribed for notifications on " + productName);
 
 
@@ -74,7 +79,7 @@ public class IphoneProductObservable implements StockAvailabilityObservable{
         System.out.println("RESTOCKED: " + productName + " - Added " + quantity + " items " + " | " + "Current stock: " + stockQuantity);
         // Only notify if product was previously out of stock
         if (wasOutOfStock && stockQuantity > 0) {
-            notifyStockObservers();
+            notifyStockObserver();
         }
 
 
@@ -100,5 +105,5 @@ public class IphoneProductObservable implements StockAvailabilityObservable{
         return stockQuantity;
     }
 
-   
+
 }
