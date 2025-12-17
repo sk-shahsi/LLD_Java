@@ -2,7 +2,10 @@ package com.behavioral.observer.weather.observable;
 // Concrete Observable (Subject)
 // WeatherStation - the concrete observable class that holds weather data
 
+import com.behavioral.observer.weather.observer.WeatherObserver;
+
 import java.util.ArrayList;
+import java.util.List;
 
 public class WeatherStation implements WeatherObservable{
 

@@ -3,6 +3,8 @@ package com.behavioral.observer.weather.observable;
 // Observable(Subject) interface
 // Defines methods for managing observers and notifying them of changes
 
+import com.behavioral.observer.weather.observer.WeatherObserver;
+
 public interface WeatherObservable {
 
     void addObserver(WeatherObserver observer);
