@@ -10,34 +10,18 @@ public class IphoneProductObservable implements StockAvailabilityObservable{
     private final List<StockNotificationObserver> stockObservers;
     private int stockQuantity;
 
-    public IphoneProductObservable(String productId, String productName, double price, int stockQuantity) {
+    public IphoneProductObservable(String productId, String productName, double price, List<StockNotificationObserver> stockObservers, int stockQuantity) {
         this.productId = productId;
         this.productName = productName;
         this.price = price;
+        this.stockObservers = stockObservers;
         this.stockQuantity = stockQuantity;
-        this.stockObservers = new ArrayList<>();
-    }
-
-
-
-
-    // Method to restock items
-    @Override
-    public void restock(int quantity) {
-        boolean wasOutOfStock = (stockQuantity == 0);
-        stockQuantity += quantity;
-        System.out.println("RESTOCKED: " + productName + " - Added " + quantity + " items " + " | " + "Current stock: " + stockQuantity);
-        // Only notify if product was previously out of stock
-        if (wasOutOfStock && stockQuantity > 0) {
-            notifyStockObservers();
-        }
     }
 
     @Override
     public void addStockObserver(StockAvailabilityObservable observer) {
-
-            stockObservers.add(observer);
-            System.out.println("[+]" + observer.getUserId() + " subscribed for notifications on " + productName);
+        stockObservers.add(observer);
+        System.out.println("[+]" + observer.getUserId() + " subscribed for notifications on " + productName);
 
 
 
@@ -47,9 +31,10 @@ public class IphoneProductObservable implements StockAvailabilityObservable{
     public void removeStockObserver(StockAvailabilityObservable observer) {
         stockObservers.remove(observer);
         System.out.println("[-]" + observer.getUserId() + " unsubscribed for notifications on " + productName);
-
-
     }
+
+
+
 
     @Override
     public void notifyStockObserver() {
@@ -64,11 +49,13 @@ public class IphoneProductObservable implements StockAvailabilityObservable{
             }
         }
 
+
     }
 
-    // Method to purchase items
     @Override
     public boolean purchase(int quantity) {
+
+
         if (stockQuantity >= quantity) {
             stockQuantity -= quantity;
             System.out.println("PURCHASE SUCCESS: " + quantity + " units of " + productName + " | " + "Remaining stock: " + stockQuantity);
@@ -77,9 +64,22 @@ public class IphoneProductObservable implements StockAvailabilityObservable{
             System.out.println("PURCHASE FAILED: " + productName + " is out of stock! | " + "Available Quantity: " + stockQuantity);
             return false;
         }
+
     }
 
-    // Getters
+    @Override
+    public void restock(int quantity) {
+        boolean wasOutOfStock = (stockQuantity == 0);
+        stockQuantity += quantity;
+        System.out.println("RESTOCKED: " + productName + " - Added " + quantity + " items " + " | " + "Current stock: " + stockQuantity);
+        // Only notify if product was previously out of stock
+        if (wasOutOfStock && stockQuantity > 0) {
+            notifyStockObservers();
+        }
+
+
+    }
+
     public String getProductId() {
         return productId;
     }
@@ -92,8 +92,13 @@ public class IphoneProductObservable implements StockAvailabilityObservable{
         return price;
     }
 
+    public List<StockNotificationObserver> getStockObservers() {
+        return stockObservers;
+    }
+
     public int getStockQuantity() {
         return stockQuantity;
     }
 
+   
 }
