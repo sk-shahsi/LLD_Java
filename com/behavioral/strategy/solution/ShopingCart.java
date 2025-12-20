@@ -1,4 +1,7 @@
 package com.behavioral.strategy.solution;
+
+import com.behavioral.strategy.solution.strategy.PaymentStrategy;
+
 // Context class - holds reference to a strategy object
 public class ShopingCart {
     private PaymentStrategy paymentStrategy;
