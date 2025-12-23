@@ -1,7 +1,7 @@
 package com.behavioral.iterator.solution;
 
 import java.util.List;
-
+// Concrete Iterator - for Library
 public class ReverseLibraryIterator implements Iterator<Book> {
     private final List<Book> books;
     private int position;
