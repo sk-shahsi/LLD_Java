@@ -1,10 +1,9 @@
 package com.behavioral.iterator.solution;
 
-import java.util.Iterator;
 // Aggregate interface
 public interface BookCollection {
-    Iterator<Book> createIterator();
+    LibraryIterator createIterator();
 
-    Iterator<Book> createReverseIterator();
+    ReverseLibraryIterator createReverseIterator();
 
 }
