@@ -1,6 +1,10 @@
 package com.behavioral.state.vendingmachinestates.impl;
 
 import com.behavioral.state.context.VendingMachine;
+import com.behavioral.state.vendingmachinestates.Coin;
+import com.behavioral.state.vendingmachinestates.State;
+
+import java.util.List;
 
 public class HasMoneyState extends State {
 

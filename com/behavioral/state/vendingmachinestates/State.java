@@ -5,7 +5,7 @@ import com.behavioral.state.context.VendingMachine;
 
 import java.util.List;
 
-public abstract class State {
+public class State {
 
     public void clickOnInsertCoinButton(VendingMachine machine) throws Exception {
         // by default nothing happens
