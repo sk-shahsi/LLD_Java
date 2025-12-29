@@ -1,6 +1,10 @@
 package com.behavioral.state.context;
 
+import com.behavioral.state.vendingmachinestates.Coin;
+import com.behavioral.state.vendingmachinestates.State;
+
 import java.util.ArrayList;
+import java.util.List;
 
 public class VendingMachine {
     private State vendingMachineState;
