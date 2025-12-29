@@ -1,6 +1,6 @@
 package com.behavioral.state.vendingmachinestates;
 
-public class Coin {
+public enum Coin {
     PENNY(1),
     NICKEL(5),
     DIME(10),
