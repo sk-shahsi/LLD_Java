@@ -1,5 +1,7 @@
 package com.behavioral.state.context;
 
+import java.util.ArrayList;
+
 public class VendingMachine {
     private State vendingMachineState;
     private Inventory inventory;
