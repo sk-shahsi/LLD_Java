@@ -1,4 +1,4 @@
-package com.critional.deaign.objectpool;
+package com.critional.deaign.objectpool.problem;
 
 public class Client {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package com.critional.deaign.objectpool;
+package com.critional.deaign.objectpool.problem;
 
 import java.util.ArrayList;
 
