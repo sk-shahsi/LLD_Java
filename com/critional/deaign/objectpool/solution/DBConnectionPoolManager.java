@@ -1,5 +1,10 @@
 package com.critional.deaign.objectpool.solution;
 
+import com.critional.deaign.objectpool.DBConnection;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class DBConnectionPoolManager {
     // Singleton
     private static DBConnectionPoolManager dbConnectionPoolManagerInstance = null;

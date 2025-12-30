@@ -1,5 +1,7 @@
 package com.critional.deaign.objectpool.solution;
 
+import com.critional.deaign.objectpool.DBConnection;
+
 public class Client {
     public static void main(String[] args) {
         System.out.println("======= Object Pool Design Pattern ======");
